@@ -3,7 +3,7 @@ package txn
 import (
 	"fmt"
 
-	"github.com/globalsign/mgo/bson"
+	"github.com/steve-gray/mgo-eventsourcing/bson"
 	. "gopkg.in/check.v1"
 )
 

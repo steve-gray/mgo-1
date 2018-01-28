@@ -33,7 +33,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/globalsign/mgo/bson"
+	"github.com/steve-gray/mgo-eventsourcing/bson"
 
 	. "gopkg.in/check.v1"
 )

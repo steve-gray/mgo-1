@@ -1,6 +1,6 @@
 language: go
 
-go_import_path: github.com/globalsign/mgo
+go_import_path: github.com/steve-gray/mgo-eventsourcing
 
 go:
     - 1.8.x
@@ -33,7 +33,7 @@ install:
 
 before_script:
     - golint  ./... | grep -v 'ID' | cat
-    - go vet github.com/globalsign/mgo/bson github.com/globalsign/mgo/txn github.com/globalsign/mgo 
+    - go vet github.com/steve-gray/mgo-eventsourcing/bson github.com/steve-gray/mgo-eventsourcing/txn github.com/steve-gray/mgo-eventsourcing 
     - export NOIPV6=1
     - make startdb
 
