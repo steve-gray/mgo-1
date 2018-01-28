@@ -1,11 +1,16 @@
 package bson
 
-// useJSONTagFallback lets the BSON decoder fall back to using the json tag on a structure if there
-// is a JSON tag present.
+// Current state of the JSON tag fallback option. 
 var useJSONTagFallback = false
 
-// SetJSONFallback enables or disables the JSON fallback for a structure. Due to the nature of MGO's decoder,
-// this is a global setting that needs to be enabled application by application.
-func SetJSONFallback(state bool) {
+// SetJSONTagFallback enables or disables the JSON-tag fallback for structure tagging. When this is enabled, structures
+// without BSON tags on a field will fall-back to using the JSON tag (if present).
+func SetJSONTagFallback(state bool) {
 	useJSONTagFallback = state
+}
+
+// JSONTagFallbackState returns the current status of the JSON tag fallback compatability option. See SetJSONTagFallback
+// for more information.
+func JSONTagFallbackState() bool {
+	return useJSONTagFallback
 }
